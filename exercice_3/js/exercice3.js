@@ -1,19 +1,31 @@
-/*
-Dans le <div>, modifiez la valeur de l'attribut id de navBar à socialNetworkNavigation , 
-à l'aide de la setAttributeméthode .
-*/
-
-let editNavBar = document.querySelector(" #navBar ")
-
-editNavBar.setAttribute ("id", "socialNetworkNavigation")
-
-/*
-Nous allons ajouter un nouveau <li>au <ul>
-Tout d'abord, créez une nouvelle <li>balise (utilisez la createElementméthode).
-Créez un nouveau nœud de texte avec "Déconnexion" comme texte spécifié.
-Ajoutez le nœud de texte au nœud de liste nouvellement créé ( <li>).
-Enfin, ajoutez ce nœud de liste mis à jour à la liste non ordonnée ( <ul>), 
-en utilisant la appendChildméthode.
 
 
-*/
+
+//1 Add the code above, to your HTML file 
+
+/*  2 In the <div>, change the value of the 
+id attribute from navBar to socialNetworkNavigation, using the setAttribute method. */
+
+changeid=document.getElementById("navBar");
+
+changeid.setAttribute("id","socialNetworkNavigation");
+
+//3 We are going to add a new <li> to the <ul>
+
+//3-1 First, create a new <li> tag (use the createElement method).
+
+let newLi = document.createElement('li') 
+
+//3-2 Create a new text node with “Logout” as its specified text.
+
+let newTextNode = document.createTextNode('Logout')
+
+//3-3 Append the text node to the newly created list node (<li>).
+newLi.appendChild(newTextNode)
+
+/* 3-4 Finally, append this updated list node to the unordered list 
+(<ul>), using the appendChild method.*/
+
+document.getElementsByTagName("ul")[0].appendChild(newLi)
+
+
